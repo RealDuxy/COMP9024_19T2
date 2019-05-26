@@ -77,11 +77,17 @@
 * LinkedList Searching, LinkedList Sorting
 * LinkedList Stack and LinkedList Queue
 
+### Analysis Algorithms
+* Algorithms Complexity.
 
 ### Graph
 * Graph Representation
 * Graph Searching
-* Graph Algorithms
+* Graph Algorithms(BFS,DFS,Weight Graph,Directed Graph ,Minimum Spanning Trees,Kruskal's Algorithm,Prim's Algorithm,Dijkstra's Algorithm)
+* Kruskal's Algorithm (consider all the edges,push to priority queue, then pop from the minimum weighted edge)
+* Prim's Algorithm (start from vertex, consider all the minimum edges with the connected vertex,then add to used edges)
+* Dijkstra's Algorithm(start from vertex,consider all the minimum edges with the connected vertex, find the combined minimum edges)
+
 
 ### Tree
 * init, insert,update, delete, free
