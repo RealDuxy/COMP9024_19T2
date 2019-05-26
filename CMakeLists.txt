@@ -6,5 +6,5 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(COMP9024_19T2
         # Pre_Class/main.c
-        Pre_Class/array.c)
+        Pre_Class/mergeSort.c)
 

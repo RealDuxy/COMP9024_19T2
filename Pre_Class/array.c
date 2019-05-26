@@ -8,6 +8,12 @@
 
 #define SIZE 6     // define a symbolic constant
 
+void swap(int array[],int i,int j){
+    int temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+
+}
 /**
  * bubble sorting
  * @param array
@@ -17,9 +23,8 @@ void bubbleSort(int array[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - 1 - i; j++) {
             if (array[j] > array[j + 1]) {        // 相邻元素两两对比
-                int temp = array[j + 1];        // 元素交换
-                array[j + 1] = array[j];
-                array[j] = temp;
+                // swap element
+                swap(array,j,j + 1);
             }
         }
     }
