@@ -15,6 +15,8 @@
 * https://www.w3cschool.cn/c/
 * https://leetcode.com/
 
+Clion
+
 ## Git Command
 * Why we use git
 * git command
@@ -73,7 +75,7 @@
 
 ### LinkedList Operation and Algorithms
 * data structures of Single LinkedList and Double LinkedList
-* Init,Insert,Update,Delete,Free
+* Init,Insert,Update,Delete,Free,Show
 * LinkedList Searching, LinkedList Sorting
 * LinkedList Stack and LinkedList Queue
 
@@ -83,6 +85,8 @@
 ### Graph
 * Graph Representation
 * Graph Searching
+* Hamiltonian Path and Circuit(all vertices)
+* Euler Path and Circuit(all edges)
 * Graph Algorithms(BFS,DFS,Weight Graph,Directed Graph ,Minimum Spanning Trees,Kruskal's Algorithm,Prim's Algorithm,Dijkstra's Algorithm)
 * Kruskal's Algorithm (consider all the edges,push to priority queue, then pop from the minimum weighted edge)
 * Prim's Algorithm (start from vertex, consider all the minimum edges with the connected vertex,then add to used edges)
@@ -90,7 +94,7 @@
 
 
 ### Tree
-* init, insert,update, delete, free
+* init, insert,update, delete, free ,show
 * binary tree
 * height,width,level
 * AVL tree, 2-3-4 Tree
