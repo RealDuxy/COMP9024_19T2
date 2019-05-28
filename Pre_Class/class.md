@@ -5,7 +5,7 @@
 * learn basic C programming language skills(style, main,parameters,data types,loops,class,include) 
 * understand data structures(array,single list,double list,graph,tree)
 * how to analysis algorithms(sorting, searching, routing, KMP)
-
+label:
 ## Learning Resources
 * Algorithms in C, Parts 1-4, Robert Sedgewick
 * Algorithms in C, Part 5, Robert Sedgewick
@@ -30,6 +30,7 @@ Clion
 
 * clion git operations
 
+
 ## C Languages
 * main
 * parameters
@@ -39,7 +40,7 @@ Clion
 * C styles
 * arrays
 * structures
-* include
+* include(/usr/lib/ /usr/local/lib /current/lib(current dic))
 * define
 * comments
 * https://github.com/marey/COMP9024_Solution/tree/master/assignment1
@@ -48,7 +49,7 @@ Clion
 * gcc
 * echo
 * output
-* valgrind
+* valgrind(detect memory leak)
 
 ## COMP9024 Themes
 ### Data structures
