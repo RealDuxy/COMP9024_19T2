@@ -14,6 +14,13 @@ void swap(int array[],int i,int j){
     array[j] = temp;
 
 }
+
+void swap_pointer(int* p1,int* p2) {
+    int* temp = p1;
+    p1 = p2;
+    p2 = temp;
+}
+
 /**
  * bubble sorting
  * @param array

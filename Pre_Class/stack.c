@@ -1,9 +1,7 @@
 //
 // Created by Rui.Mu on 2018-12-16.
 //
-#include "IntStack.h"
-#include <assert.h>
-
+#include "stack.h"
 #define MAXITEMS 10
 
 static struct {
@@ -25,20 +23,15 @@ int StackIsEmpty() {
 void StackPush(int n) {
     // insert int on top of stack
     assert(stackObject.top < MAXITEMS - 1);
-
     stackObject.top++;
-
     int i = stackObject.top;
-
     stackObject.item[i] = n;
 }
 
 int StackPop() {
     assert(stackObject.top > -1);
-
     int i = stackObject.top;
     int n = stackObject.item[i];
-
     stackObject.top--;
 
     return n;

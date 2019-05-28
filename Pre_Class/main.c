@@ -4,7 +4,20 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include "stack.h"
 
-int main() {
+#define MAX 1000000
+#define MIN 1000
+
+#define N 5
+
+
+
+
+
+
+
+int main(int argc,char* argv[]) {
 
 }

@@ -40,6 +40,7 @@ Clion
 * C styles
 * arrays
 * structures
+* typedef 
 * include(/usr/lib/ /usr/local/lib /current/lib(current dic))
 * define
 * comments
@@ -72,7 +73,14 @@ Clion
 ### Stack and Queue
 * stack
 * queue
-* primary stack and primary queue
+* priority stack and primary queue
+* priority queue (insert O(logN),push,pop)
+
+
+structure （结构体）一堆的需要定义的数据类型，data，day
+
+
+
 
 ### LinkedList Operation and Algorithms
 * data structures of Single LinkedList and Double LinkedList
@@ -86,8 +94,8 @@ Clion
 ### Graph
 * Graph Representation
 * Graph Searching
-* Hamiltonian Path and Circuit(all vertices)
-* Euler Path and Circuit(all edges)
+* Hamiltonian Path and Circuit(all vertices) 
+* Euler Path and Circuit(all edges)        
 * Graph Algorithms(BFS,DFS,Weight Graph,Directed Graph ,Minimum Spanning Trees,Kruskal's Algorithm,Prim's Algorithm,Dijkstra's Algorithm)
 * Kruskal's Algorithm (consider all the edges,push to priority queue, then pop from the minimum weighted edge)
 * Prim's Algorithm (start from vertex, consider all the minimum edges with the connected vertex,then add to used edges)
@@ -95,10 +103,11 @@ Clion
 
 
 ### Tree
-* init, insert,update, delete, free ,show
+* init, insert,update, delete, free ,show, post order,pre order, inorder
 * binary tree
 * height,width,level
-* AVL tree, 2-3-4 Tree
+* AVL tree,Splay tree, 2-3-4 Tree, black-red tree.
+
 
 ### String Algorithms
 * Boyer-Moore Algorithm
