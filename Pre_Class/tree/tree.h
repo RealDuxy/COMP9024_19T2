@@ -11,17 +11,21 @@
 
 #endif //COMP9024_19T2_TREE_H
 
-
 typedef struct Node *TreeNode;
 
-typedef struct Tree *BinaryTree;
+TreeNode insertTreeNode(TreeNode treeNode, int data);
+
+void printPreTreeNode(TreeNode treeNode);
+
+void printMidTreeNode(TreeNode treeNode) ;
+
+void printPostTreeNode(TreeNode treeNode);
+
+int heightTreeNode(TreeNode treeNode);
+
+bool searchTree(TreeNode treeNode, int data);
+
+TreeNode mostLeftTreeNode(TreeNode treeNode);
 
 
-BinaryTree createBinaryTree();
-
-void insertBinaryTree(BinaryTree tree, int data);
-
-void printTree(BinaryTree tree);
-
-
-int heightTree(BinaryTree tree);
+int treeData(TreeNode treeNode);

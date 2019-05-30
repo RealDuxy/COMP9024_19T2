@@ -1,15 +1,12 @@
-cmake_minimum_required(VERSION 3.12)
-project(COMP9024_19T2 C)
+cmake_minimum_required(VERSION 3.13)
+project(COMP9024_19T2)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
-set(CMAKE_BUILD_TYPE Debug)
-
+include_directories(Pre_Class)
 
 add_executable(COMP9024_19T2
-        Pre_Class/Graph.c
-        Pre_Class/list.c
-        Pre_Class/list.h
-        # Pre_Class/mergeSort.c
+        Pre_Class/tree/tree.h
+        Pre_Class/tree/tree.c
+        Pre_Class/tree/main.c
         )
-

@@ -26,6 +26,8 @@ void QueueEnqueue(int n) { // insert int at end of queue
         queueObject.item[i] = queueObject.item[i - 1];
     }
 
+    //5 1，2，3
+
     queueObject.item[0] = n;
 }
 

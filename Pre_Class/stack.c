@@ -26,6 +26,9 @@ void StackPush(int n) {
     stackObject.top++;
     int i = stackObject.top;
     stackObject.item[i] = n;
+
+
+    // 1，2，3，5
 }
 
 int StackPop() {

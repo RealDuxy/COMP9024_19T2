@@ -55,7 +55,8 @@ void insertTrieTree(TrieTree root, const char *key, const char *word) {
  * @param key
  */
 Tree getTrieTreeUrlsTree(TrieTree root, const char *key) {
-    // get length of key
+    // apple
+    // get length of key ( 5)
     size_t length = strlen(key);
 
     int index,level = 0;

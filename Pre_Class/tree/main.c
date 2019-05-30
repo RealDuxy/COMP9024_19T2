@@ -6,19 +6,34 @@
 int main() {
 
 
-    BinaryTree  binaryTree = createBinaryTree();
+    TreeNode root = NULL;
 
-    insertBinaryTree(binaryTree,10);
+    root = insertTreeNode(root,10);
 
-    insertBinaryTree(binaryTree,2);
-    insertBinaryTree(binaryTree,15);
+    root = insertTreeNode(root,2);
 
-    insertBinaryTree(binaryTree,30);
+    root = insertTreeNode(root,15);
+    root = insertTreeNode(root,40);
 
-    printTree(binaryTree);
+    int height = heightTreeNode(root);
 
-    int height = heightTree(binaryTree);
+    printMidTreeNode(root);
 
     printf(" tree height is : %d",height);
 
+
+    if( searchTree(root,40)) {
+        printf("found \n");
+    }else {
+        printf("not found \n");
+    }
+
+    //     10
+    //   2    15
+    //            40
+
+
+    TreeNode leftTreeNoe = mostLeftTreeNode(root);
+
+    printf("most left tree node is : %d", treeData(leftTreeNoe));
 }

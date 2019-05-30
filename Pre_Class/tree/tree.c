@@ -4,16 +4,14 @@
 
 #include "tree.h"
 
+
+
 struct Node {
     struct Node *left;
     struct Node *right;
     int data;
 };
 
-struct Tree {
-    TreeNode root;
-    int numberOfNodes;
-};
 
 TreeNode createTreeNode(int data) {
     TreeNode newTreeNode = malloc(sizeof(struct Node));
@@ -26,15 +24,25 @@ TreeNode createTreeNode(int data) {
     return newTreeNode;
 }
 
-BinaryTree createBinaryTree() {
-    BinaryTree binaryTree = malloc(sizeof(struct Tree));
 
-    if (binaryTree != NULL) {
-        binaryTree->root = NULL;
-        binaryTree->numberOfNodes = 0;
+bool searchTree(TreeNode treeNode, int data) {
+
+    if(treeNode == NULL) {
+        return false;
+    } else {
+
+        bool result = false;
+
+        if(data > treeNode->data) {
+            result = searchTree(treeNode->right,data);
+        }else if (data < treeNode->data) {
+            result = searchTree(treeNode->left,data);
+        }else {
+            result = true;
+        }
+
+        return result;
     }
-
-    return binaryTree;
 }
 
 
@@ -61,24 +69,7 @@ TreeNode insertTreeNode(TreeNode treeNode, int data) {
     return treeNode;
 }
 
-void insertBinaryTree(BinaryTree tree, int data) {
-
-    if (tree != NULL) {
-
-        // crate new node
-        TreeNode newTreeNode = createTreeNode(data);
-        // bind
-        if (tree->root == NULL) {
-            tree->root = newTreeNode;
-            tree->numberOfNodes ++;
-        } else {
-            tree->root = insertTreeNode(tree->root,data);
-            tree->numberOfNodes ++;
-        }
-
-    }
-}
-
+//
 void printPreTreeNode(TreeNode treeNode) {
 
     if(treeNode!=NULL) {
@@ -88,8 +79,12 @@ void printPreTreeNode(TreeNode treeNode) {
     }
 }
 
+//          2
+//      1           3
+//  null, null null    null
 void printMidTreeNode(TreeNode treeNode) {
 
+    // treeNode 1
     if(treeNode!=NULL) {
         printMidTreeNode(treeNode->left);
         printf("%d \n",treeNode->data);
@@ -103,16 +98,6 @@ void printPostTreeNode(TreeNode treeNode) {
         printPostTreeNode(treeNode->left);
         printPostTreeNode(treeNode->right);
         printf("%d \n",treeNode->data);
-    }
-}
-
-void printTree(BinaryTree tree) {
-    if (tree == NULL || tree->numberOfNodes ==0) {
-        printf("empty tree");
-    } else {
-        printf("tree nodes number is : %d \n",tree->numberOfNodes);
-        printf("all the nodes:");
-        printPostTreeNode(tree->root);
     }
 }
 
@@ -131,18 +116,26 @@ int heightTreeNode(TreeNode treeNode) {
             return rightHeight + 1;
         }
     }
-
 }
 
 
-int heightTree(BinaryTree tree) {
-
-    if (tree == NULL || tree->root == NULL) {
-        return 0;
-    }else {
-        return heightTreeNode(tree->root);
+TreeNode mostLeftTreeNode(TreeNode treeNode) {
+    if (treeNode == NULL) {
+        return treeNode;
+    } else {
+        if (treeNode->left!=NULL) {
+            return mostLeftTreeNode(treeNode->left);
+        } else {
+            return treeNode;
+        }
     }
 }
 
-
+int treeData(TreeNode treeNode) {
+    if (treeNode!=NULL) {
+        return treeNode->data;
+    } else {
+        return 0;
+    }
+}
 

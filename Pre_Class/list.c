@@ -14,6 +14,8 @@ typedef struct Node {
     struct Node *previous;
     struct Node *next;
     int data;
+    int weight;
+    int time;
 } *LinkedNode;
 
 struct _DoubleLinkedList {
@@ -23,7 +25,7 @@ struct _DoubleLinkedList {
     int numberOfNodes;
 };
 
-// 1,2,3,4,6,1,2,3,4
+// 1,2,3,4,6
 // SET()
 
 
@@ -143,13 +145,20 @@ void insertListSorted(LinkedList list, int data) {
                 // insert 4
                 if (tempNode->data > data){
                     // 3
+                    // 1,3,    4        5,7,9
+
+                    //tempNode = 5 previousNode = 3   newNode = 4
                     LinkedNode previousNode = tempNode->previous;
+                    //
                     previousNode->next = newNode;
+                    //
                     newNode->previous = previousNode;
+                    // 5
                     tempNode->previous = newNode;
+
+
                     newNode->next = tempNode;
                     list->numberOfNodes++;
-
                     exist = true;
                     break;
                 }
@@ -165,6 +174,44 @@ void insertListSorted(LinkedList list, int data) {
                 list->numberOfNodes++;
             }
 
+        }
+    }
+
+}
+
+void deletetDoubleList(LinkedList list, int data) {
+    // create new node
+    if(!isEmpty(list)) {
+        LinkedNode deleteNode;
+        if (list->header->data   == data) {
+            deleteNode = list->header;
+            list->header = list->header->next;
+            list->numberOfNodes--;
+            free(deleteNode);
+
+            // 1
+
+            if (isEmpty(list)){
+                list->tail = NULL;
+            }
+        } else if (list->tail !=list->header && list->tail->data == data) {
+            deleteNode = list->tail;
+            // 1,2,3,4,5
+            list->tail = list->tail->previous;
+            list->tail->next = NULL;
+            free(deleteNode);
+        } else {
+            LinkedNode tempNode =  list->header;
+            while ((tempNode = tempNode->next)!=NULL) {
+                if (tempNode->data == data) {
+                    // 1,2,3,4  3
+                    deleteNode = tempNode;
+                    LinkedNode previousNode = tempNode->previous;
+                    previousNode->next = tempNode->next;
+                    previousNode->next->previous = previousNode;
+                    free(deleteNode);
+                }
+            }
         }
     }
 
@@ -239,20 +286,11 @@ void insertList(LinkedList list, int data) {
 void printDoubleLinkedListNext(LinkedList list) {
 
     if (list!=NULL) {
-        printf("next direction\n");
         LinkedNode temp = list->header;
 
         while (temp!=NULL) {
             printf("%d\n",temp->data);
             temp = temp->next;
-        }
-
-        printf("previous direction\n");
-
-        temp = list->tail;
-        while (temp!=NULL) {
-            printf("%d\n",temp->data);
-            temp = temp->previous;
         }
     }
 }

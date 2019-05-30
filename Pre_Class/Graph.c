@@ -25,8 +25,9 @@ int main(int argc,char* argv[]) {
     }
 
     insertListSorted(edges[0],1);
-
-    // insertListSorted(edges[3],4);
+    insertListSorted(edges[0],2);
+    insertListSorted(edges[2],4);
+    insertListSorted(edges[3],4);
 
     // insertListSorted(edges[3],0);
 
@@ -36,7 +37,10 @@ int main(int argc,char* argv[]) {
     // insertListSorted(edges[0],3)
 
     for(int i = 0;i<numberOfVertex;i++) {
+        printf("current vertex is %d: the edges are:\n",i);
         printDoubleLinkedListNext(edges[i]);
+
+        printf("\n");
     }
 }
 
